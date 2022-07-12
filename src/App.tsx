@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminBiographies from './components/pages/admin_dashboard/AdminBiographies';
 import AdminBiography from './components/pages/admin_dashboard/AdminBiography';
+import AdminCreateProject from './components/pages/admin_dashboard/AdminCreateProject';
 import AdminProject from './components/pages/admin_dashboard/AdminProject';
 import AdminProjectImage from './components/pages/admin_dashboard/AdminProjectImage';
 import AdminProjectImages from './components/pages/admin_dashboard/AdminProjectImages';
@@ -29,6 +30,7 @@ function App() {
         </Route>
         <Route path='dashboard' element={<Dashboard/>}>
           <Route path='projects' element={<AdminProjects/>}>
+            <Route path='create' element={<AdminCreateProject/>}/>
             <Route path=':id' element={<AdminProject/>}/>
           </Route>
           <Route path='images' element={<AdminProjectImages/>}>
